@@ -42,4 +42,6 @@ Fork this repo and submit a PR for review and potential merge to main branch. Fe
 👨‍💻 **Gabriela Cruz**
 
 - Github: [@viricruz](https://github.com/viricruz)
+
 - LinkedIn: [@viricruz](https://www.linkedin.com/in/viricruz/)
+
