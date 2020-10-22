@@ -1,9 +1,8 @@
-import React from 'react'
-import ProductList from './productList'
+import React from 'react';
+import ProductList from './productList';
 
 function App() {
-  return <ProductList />
+  return <ProductList />;
 }
 
-
-export default App
+export default App;
