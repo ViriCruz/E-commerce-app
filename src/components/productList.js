@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Product from './product'
+import Product from './product/product'
+
 class ProductList extends Component {
   state = {
     products: [],
