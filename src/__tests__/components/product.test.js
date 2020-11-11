@@ -68,7 +68,7 @@ describe('Product', () => {
     expect(productImageSrc).toEqual(productWrapper.props().imageSrc)
   })
 
-  it('render productPrice component', () => {
+  it('renders productPrice component', () => {
     const productWrapper = shallow(<Product />)
     const productPrice = productWrapper.find('ProductPrice')
     
