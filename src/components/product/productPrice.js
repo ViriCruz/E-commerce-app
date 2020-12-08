@@ -1,4 +1,5 @@
 import React from 'react'
+import './productPrice.css'
 
 const ProductPrice = ({ price }) => (
   <div>

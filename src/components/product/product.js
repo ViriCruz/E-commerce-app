@@ -2,10 +2,12 @@ import React from 'react'
 import ProductName from './productName'
 import ProductImage from './productImage'
 import ProductPrice from './productPrice'
+import './product.css'
 
-const Product = ({ name, type, price, imageSrc }) => {
+const Product = ({ name, price, currency, imageSrc, type}) => {
+
   return (
-    <div>
+    <div className="product">
       <ProductImage type={type} imageSrc={imageSrc} />
       { name !=='' ? <ProductName name={name} type={type} /> : undefined }
       <ProductPrice price={price} />

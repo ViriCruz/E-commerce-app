@@ -80,7 +80,7 @@ describe('ProductList component', () => {
     const productListItems = productListWrapper.find('li');
     const productItem = productListItems.find('Product')
 
-    expect(productItem.props().product).toEqual(productListWrapper.state().products[0])
+    expect(productItem.props()).toEqual(productListWrapper.state().products[0])
   })
 
 });

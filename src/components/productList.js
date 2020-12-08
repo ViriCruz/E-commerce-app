@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import Product from './product/product'
+import { Link } from 'react-router-dom'
 
 class ProductList extends Component {
   state = {
-    products: [],
+    products: [
+      {
+        name: 'Steren Stv-205 Arm Support Monitor',
+        price: 30.00,
+        currency: 'USD',
+        imageSrc: 'custom_assets/stv-205.jpg',
+        type: 'standard'
+      }
+    ],
   }
 
   render() {
@@ -12,7 +21,7 @@ class ProductList extends Component {
       <div className="container">
         <ul>
           {
-            products.map((product, i) => <li key={i}><Product product={product} /></li>)
+            products.map((product, i) => <li key={i}><Link path={`/products/${product.name}`}><Product {...product} /></Link></li>)
           }
         </ul>
       </div>
