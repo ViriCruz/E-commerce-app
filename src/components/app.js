@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductList from './productList';
-import DetailedView from './productDetailedView'
+import ProductDetailedView from './productDetailedView'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const App = () => (
@@ -10,7 +10,7 @@ const App = () => (
           <ProductList />
         </Route>
         <Route path="/products/:id">
-          <DetailedView />
+          <ProductDetailedView />
         </Route>
       </Switch>
     </Router>

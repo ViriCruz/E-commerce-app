@@ -21,7 +21,7 @@ class ProductList extends Component {
       <div className="container">
         <ul>
           {
-            products.map((product, i) => <li key={i}><Link path={`/products/${product.name}`}><Product {...product} /></Link></li>)
+            products.map((product, i) => <li key={i}><Link to={`/products/${product.name}`}><Product {...product} /></Link></li>)
           }
         </ul>
       </div>
