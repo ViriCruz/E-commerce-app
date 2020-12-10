@@ -1,4 +1,5 @@
-h2 {
-  color: #666;
-  font-size: 14px
+.standard-title {
+  color: rgb(77, 77, 77);
+  font-size: 9px;
+  font-weight: 300;
 }

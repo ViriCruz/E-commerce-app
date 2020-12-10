@@ -7,7 +7,7 @@ describe('ProductList component', () => {
 
   beforeAll(() => {
     productListWrapper = shallow(<ProductList />);
-  })
+  });
 
   it('renders a div container', () => {
     const container = productListWrapper.find('div.container');
@@ -16,7 +16,6 @@ describe('ProductList component', () => {
   });
 
   it('has state', () => {
-
     expect(productListWrapper.state()).toBeDefined();
   });
 
@@ -31,7 +30,7 @@ describe('ProductList component', () => {
 
     expect(productsListUl).toHaveLength(1);
   });
-  
+
   it('renders no li elements when no products exist', () => {
     productListWrapper.setState({ products: [] });
     const productListItems = productListWrapper.find('li');
@@ -66,21 +65,19 @@ describe('ProductList component', () => {
     ];
     productListWrapper.setState({ products });
     const productListItems = productListWrapper.find('li');
-    const productItems = productListItems.find('Product')
+    const productItems = productListItems.find('Product');
 
-    expect(productItems).toHaveLength(2)
-    
+    expect(productItems).toHaveLength(2);
   });
 
   it('passes product property of state to product as prop', () => {
     const products = [
-      { name: 'Chair', price: 100 }
+      { name: 'Chair', price: 100 },
     ];
     productListWrapper.setState({ products });
     const productListItems = productListWrapper.find('li');
-    const productItem = productListItems.find('Product')
+    const productItem = productListItems.find('Product');
 
-    expect(productItem.props()).toEqual(productListWrapper.state().products[0])
-  })
-
+    expect(productItem.props()).toEqual(productListWrapper.state().products[0]);
+  });
 });

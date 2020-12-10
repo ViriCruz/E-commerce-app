@@ -1,27 +1,40 @@
 import React, { Component } from 'react';
-import Product from './product/product'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Product from './product/product';
+import Button from './buttons/button'
 
 class ProductList extends Component {
-  state = {
-    products: [
-      {
-        name: 'Steren Stv-205 Arm Support Monitor',
-        price: 30.00,
-        currency: 'USD',
-        imageSrc: 'custom_assets/stv-205.jpg',
-        type: 'standard'
-      }
-    ],
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
+      ],
+    };
   }
 
   render() {
-    const { products } = this.state
+    const { products } = this.state;
     return (
       <div className="container">
-        <ul>
+        <ul className="product-list">
           {
-            products.map((product, i) => <li key={i}><Link to={`/products/${product.name}`}><Product {...product} /></Link></li>)
+            products.map((product, i) => (
+              <li key={i}>
+                <Link to={`/products/${product.name}`}>
+                  <Product {...product} />
+                  <div className="container justify-content-center py-2">
+                    <Button type='button' text='Buy' color='yellow' />
+                  </div>
+                </Link>
+              </li>
+            ))
           }
         </ul>
       </div>

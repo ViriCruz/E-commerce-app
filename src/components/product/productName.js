@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
-import './productName.css'
+import './productName.css';
 
 const ProductName = ({ name, type }) => (
   <div className={`font-weight-bold ${type}-title`}>
     <h2>{name}</h2>
   </div>
-)
+);
 
 ProductName.defaultProps = {
-  name: ''
-}
+  name: '',
+};
 
 ProductName.propTypes = {
-  name: PropTypes.string
-}
+  name: PropTypes.string,
+};
 
-export default ProductName 
+export default ProductName;

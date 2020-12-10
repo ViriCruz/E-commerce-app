@@ -1,38 +1,41 @@
-import React from 'react'
-import Product from '../components/product/product'
-import Button from '../components/buttons/button'
-import { useLocation } from 'react-router-dom'
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import Product from './product/product';
+import Button from './buttons/button';
 
 const ProductDetailedView = () => {
-  const location = useLocation()
-  return <div>
-    <Product 
-    name='Steren Stv-205 Arm Support Monitor' 
-    price='30.00' 
-    currency='USD' 
-    imageSrc='https://www.gravatar.com/avatar/02e8389ff167786b83973f7c54521720?s=32&d=identicon&r=PG&f=1' 
-    type="standard" />
-    <Button 
-      text="Add" 
-      type="button" 
-      color="green" 
-      style="snipcart-add-item" 
-      snipcart={
+  const location = useLocation();
+  return (
+    <div>
+      <Product
+        name="Steren Stv-205 Arm Support Monitor"
+        price="30.00"
+        currency="USD"
+        imageSrc="https://www.gravatar.com/avatar/02e8389ff167786b83973f7c54521720?s=32&d=identicon&r=PG&f=1"
+        type="standard"
+      />
+      <Button
+        text="Add"
+        type="button"
+        color="green"
+        style="snipcart-add-item"
+        snipcart={
         {
-          id:'Steren Stv-205 Arm Support Monitor',
+          id: 'Steren Stv-205 Arm Support Monitor',
           price: '30.00',
           url: location.pathname,
-          name: 'Steren Stv-205 Arm Support Monitor'
+          name: 'Steren Stv-205 Arm Support Monitor',
         }
-      } 
+      }
       />
-      <Button 
-      text="click here to Checkout" 
-      type="button" 
-      color="green" 
-      style="snipcart-checkout" 
+      <Button
+        text="click here to Checkout"
+        type="button"
+        color="green"
+        style="snipcart-checkout"
       />
-  </div>
-}
+    </div>
+  );
+};
 
-export default ProductDetailedView
+export default ProductDetailedView;
