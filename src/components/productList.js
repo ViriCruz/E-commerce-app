@@ -1,13 +1,76 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Product from './product/product';
-import Button from './buttons/button'
+import Button from './layoutCustomComponents/buttons/button'
 
 class ProductList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       products: [
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
+        {
+          name: 'Steren Stv-205 Arm Support Monitor',
+          price: 30.00,
+          currency: 'USD',
+          imageSrc: 'custom_assets/arm-monitor.webp',
+          type: 'standard',
+        },
         {
           name: 'Steren Stv-205 Arm Support Monitor',
           price: 30.00,
@@ -23,7 +86,7 @@ class ProductList extends Component {
     const { products } = this.state;
     return (
       <div className="container">
-        <ul className="product-list">
+        <ul className="product-list flex-container flex-wrap">
           {
             products.map((product, i) => (
               <li key={i}>

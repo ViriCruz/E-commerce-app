@@ -3,8 +3,8 @@
 }
 
 .image-container img {
-  min-height: 284px;
-  max-height: 284px;
+  min-height: 274px;
+  max-height: 274px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }

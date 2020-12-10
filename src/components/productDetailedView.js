@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Product from './product/product';
-import Button from './buttons/button';
+import Button from './layoutCustomComponents/buttons/button';
 
 const ProductDetailedView = () => {
   const location = useLocation();
