@@ -9,12 +9,7 @@ describe('ProductList component', () => {
     productListWrapper = shallow(<ProductList />);
   });
 
-  it('renders a div container', () => {
-    const container = productListWrapper.find('div.container');
-
-    expect(container).toHaveLength(1);
-  });
-
+ 
   it('has state', () => {
     expect(productListWrapper.state()).toBeDefined();
   });

@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.css';
+import './customButton.css';
 
 const Button = ({
   text, type, color, style='', snipcart = {},

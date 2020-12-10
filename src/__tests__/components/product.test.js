@@ -6,7 +6,7 @@ describe('Product', () => {
   it('renders correctly', () => {
     const productWrapper = shallow(<Product />);
 
-    expect(productWrapper.find('div')).toHaveLength(1);
+    expect(productWrapper.find('ProductName')).toHaveLength(1);
   });
 
   it('renders productName component', () => {
@@ -43,7 +43,7 @@ describe('Product', () => {
 
   it('renders productImage component', () => {
     const productWrapper = shallow(<Product />);
-    const productImage = productWrapper.find('ProductImage');
+    const productImage = productWrapper.find('CustomImage');
 
     expect(productImage).toHaveLength(1);
   });
@@ -53,7 +53,7 @@ describe('Product', () => {
     const props = { type: 'featured' };
     productWrapper.setProps(props);
 
-    const productImageType = productWrapper.find('ProductImage').prop('type');
+    const productImageType = productWrapper.find('CustomImage').prop('type');
     expect(productImageType).toEqual(productWrapper.props().type);
   });
 
@@ -62,7 +62,7 @@ describe('Product', () => {
     const props = { imageSrc: '../../assets/icon-no-image.svg' };
     productWrapper.setProps(props);
 
-    const productImageSrc = productWrapper.find('ProductImage').prop('imageSrc');
+    const productImageSrc = productWrapper.find('CustomImage').prop('imageSrc');
 
     expect(productImageSrc).toEqual(productWrapper.props().imageSrc);
   });

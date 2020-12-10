@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './productName.css';
 
 const ProductName = ({ name, type }) => (
-  <div className={`font-weight-bold ${type}-title`}>
+  <div className={`${type}-title`}>
     <h2>{name}</h2>
   </div>
 );

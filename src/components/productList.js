@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Product from './product/product';
-import Button from './layoutCustomComponents/buttons/button'
+import Button from './layoutCustomComponents/button/customButton'
 
 class ProductList extends Component {
   constructor(props) {

@@ -1,10 +1,10 @@
 import React from 'react';
-import './productImage.css';
+import './customImage.css';
 
-const ProductImage = ({ type, imageSrc }) => (
+const CustomImage = ({ type, imageSrc }) => (
   <div className="image-container">
     <img className={`${type}-image`} src={imageSrc} />
   </div>
 );
 
-export default ProductImage;
+export default CustomImage;
